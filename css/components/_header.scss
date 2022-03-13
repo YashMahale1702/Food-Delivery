@@ -55,11 +55,12 @@
 
 			&--backimg {
 				position: absolute;
-				right: -50%;
+				right: -5%;
 				top: -55%;
-				height: 120%;
-				width: 120%;
+				height: 17rem;
+				width: 16rem;
 				object-fit: contain;
+				overflow: hidden;
 			}
 		}
 
@@ -118,11 +119,31 @@
 				align-items: center;
 				justify-content: center;
 
+				& > img {
+					height: 2rem;
+					width: 2rem;
+				}
+
 				&_text {
 					font-size: 1.8rem;
 					font-weight: bold;
-					text-decoration: underline;
+					// text-decoration: underline;
 				}
+			}
+		}
+
+		&_ratings {
+			margin-top: 2rem;
+			&--stars > * {
+				width: 3rem;
+				height: 3rem;
+			}
+
+			&--text {
+				font-size: 1.8rem;
+				margin-top: 1rem;
+				color: black;
+				font-weight: 500;
 			}
 		}
 	}
