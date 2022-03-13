@@ -1,0 +1,133 @@
+.navbar {
+	margin-top: 2rem;
+	grid-column: 2 / 8;
+	grid-row: 1 / 2;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	animation: fade-down 0.6s ease;
+	animation-fill-mode: both;
+
+	&_menu {
+		height: 1.2rem;
+		display: none;
+		opacity: 0;
+
+		@include respond(tab-port) {
+			display: inline;
+			opacity: 100%;
+		}
+	}
+
+	&_logo {
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
+
+		&--logo {
+			height: 5rem;
+			width: 5rem;
+			// background-image: url('../Assets/svg/logo.svg');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			margin-right: 1rem;
+		}
+
+		&--text {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+
+	&_options {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			padding: 1rem;
+			font-size: 1.5rem;
+			color: black;
+			// opacity: 0.8;
+			font-weight: 500;
+			outline: none;
+			text-decoration: none;
+			position: relative;
+			margin: 0 2.5rem;
+
+			&:hover {
+				color: $primary-orange;
+			}
+
+			// //* Special Animation
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: center;
+			}
+
+			&::after {
+				content: '';
+				background-image: linear-gradient(to right, $primary-orange, $primary-red);
+				position: absolute;
+				height: 1.5px;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+				transform: scaleX(0);
+				transition: all 0.4s ease;
+			}
+		}
+
+		@include respond(tab-port) {
+			display: none;
+			opacity: 0;
+		}
+	}
+
+	&_search {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.search_btn {
+			margin-right: 1rem;
+			border-radius: 40rem;
+			background-color: white;
+			color: black;
+			padding: 0.6rem 2rem;
+			text-decoration: none;
+			font-size: 1.6rem;
+			font-weight: 500;
+			transition: all 0.3s ease;
+			text-align: center;
+			// border: 2px solid black;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			&:before {
+				content: "";
+				background-image: url('../../Assets/svg/search.svg');
+				background-size: 1.5rem 3rem;
+				display: inline-block;
+				width: 1.5rem;
+				height: 3rem;
+				content: "";
+				margin-right: 0.5rem;
+			}
+
+			&:hover {
+				color: black;
+				background-color: $background-color;
+				box-shadow: 0 1.5rem 2.5rem rgba($color: black, $alpha: 0.1);
+			}
+		}
+	}
+}

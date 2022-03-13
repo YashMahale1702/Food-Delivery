@@ -1,0 +1,86 @@
+.cards-heading {
+	grid-column: 2 / 8;
+	grid-row: 5 / 6;
+	margin-top: 5rem;
+	padding: 5rem 5rem 0 5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	& > * {
+		padding-bottom: 2rem;
+	}
+
+	& .paragraph {
+		font-size: 1.6rem;
+	}
+
+	@include respond(phone) {
+		padding: 2rem 0 0 0;
+	}
+}
+
+.world-heading {
+	grid-column: 2 / 8;
+	grid-row: 7 / 8;
+	margin-top: 5rem;
+	padding: 5rem 5rem 0 5rem;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	& > * {
+		padding-bottom: 2rem;
+	}
+
+	.paragraph {
+		font-size: 1.6rem;
+	}
+
+	@include respond(phone) {
+		padding: 2rem 0 0 0;
+	}
+}
+
+.customer-heading {
+	grid-column: 2 / 8;
+	grid-row: 9 / 10;
+	margin-top: 2rem;
+	padding: 5rem 5rem 0 5rem;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	& > * {
+		padding-bottom: 2rem;
+	}
+
+	.paragraph {
+		font-size: 1.6rem;
+	}
+
+	@include respond(phone) {
+		padding: 2rem 0 0 0;
+	}
+}
+
+.heading-tertiary {
+	font-size: 2.5rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	font-weight: 400;
+	text-transform: capitalize;
+}
